@@ -3,9 +3,10 @@ from PIL import Image
 def imgPrint(auto, pixelsarray, w = 10, h = 10, file = ""):
   if file != "": pixelsarray = np.array(Image.open("./" + file)).tolist()
   if auto: h,w = len(pixelsarray),len(pixelsarray[0])
-  for a2 in range(math.floor(h/2)):
+  halflen = len(pixelsarray) / 2
+  for a2 in range(math.floor(h)):
     a = a2
-    if h != len(pixelsarray)/2: a = a2 * (len(pixelsarray)/(h*2))
+    if h != math.floor(halflen): a = a2 * (len(pixelsarray)/(h*1))
     if a % ((len(pixelsarray)/h)*2) != 0:
       temp = ""
       for b2 in range(w):
