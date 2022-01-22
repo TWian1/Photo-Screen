@@ -1,7 +1,10 @@
 import math, json, numpy as np
 from PIL import Image
 settings = json.loads(open('settings.json', 'r').read())
-w,h,pixelsarray = settings["w"], settings["h"],np.array(Image.open(settings["photo"])).tolist()
+if input().lower() == "y":
+  w,h,pixelsarray = settings["w"], settings["h"],np.array(Image.open(input())).tolist()
+else:
+  w,h,pixelsarray = settings["w"], settings["h"],np.array(Image.open(settings["photo"])).tolist()
 if settings["Auto"]: h,w = len(pixelsarray),len(pixelsarray[0])
 for a2 in range(h):
   a = a2
