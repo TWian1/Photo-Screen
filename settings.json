@@ -2,6 +2,7 @@
   "Auto": true,
   "w": 40,
   "h": 70,
-  "photo": "large.png",
+  "photo": "smario.png",
+  "select": true,
   "Comment": "The limit for the height in 1 repl screen is 420 and the limit for the width is 920"
 }
